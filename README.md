@@ -92,14 +92,52 @@ In this project, several online platforms are utilized to gather valuable data f
 </p>
 
   The number of tourists coming to Da Nang has been steadily increasing over the years, indicating that tourism in Vietnam    is growing rapidly.
-  In 2021, the tourism industry was almost frozen. The cause of this situation was the ongoing Covid-19 pandemic, where   
-  both   other countries and Vietnam had to close their borders to fight the pandemic, which significantly impacted tourism 
+  In 2021, the tourism industry was almost frozen. The cause of this situation was the ongoing Covid-19 pandemic, where 
+  both other countries and Vietnam had to close their borders to fight the pandemic, which significantly impacted tourism 
   nationwide, including in Da Nang.
 
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/b1797fb0-54d0-4426-9967-35bf50306eee" alt="image" width="350">
+</p>
+
+The number of tourists visiting Da Nang fluctuates over time, specifically, the number of tourists increases significantly at the beginning of the year in January and February, and peaks during the summer months of June, July, and August.
+The number of tourists to Da Nang tends to increase during these months due to various factors such as the climate, public holidays, and tourism events and activities taking place during this period.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/133238b9-19b9-4eab-9125-9c15185db477" alt="image" width="350">
+</p>
+
+After more than 2 years of being almost 'frozen' due to the pandemic, in 2022, Vietnam's tourism made a strong comeback with the milestone of fully reopening. Vietnam became the first country in Southeast Asia to fully open its tourism. After reopening, Vietnam's tourism recovered strongly with the number of visitors reaching 3,000 tourists. However, this figure is still far below the 18,000 international visitors in 2019. The reason for this situation is that the full reopening happened in March, which was not yet the peak tourist season. Additionally, this was the period when the Russia-Ukraine war was unfolding, leading to the closure of related flight routes, and some countries still had not lifted lockdowns due to the pandemic.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c6c3de08-ceee-4c2c-a55a-643501857d5f" alt="image" width="350">
+</p>
+
+However, compared to 2021, there was a significant growth in 2022, but the number of visitors from different countries showed considerable disparity, as seen in Chart 4.
+
+Especially with China, although it is a country that brings a large number of tourists to Da Nang, in 2022 it still had closed its borders due to the pandemic, so the number of tourists was very low compared to other countries, with only 201 visitors, the lowest in the rankings.
+
+Notably, South Korea led with 853 tourists, having the highest number of visitors. It could be due to the cold weather in South Korea, so after the pandemic, people were more likely to travel, especially to tropical countries with long coastlines and warm climates like Vietnam to enjoy the weather. Tourists from this country accounted for 28.32% of the total international visitors to Da Nang in 2022.
+
+The tourism market in 2022 experienced growth with an increase in the number of visitors from countries like the United States with 644 tourists, ranking second and accounting for 21.38% of the total international visitors to Da Nang in 2022. Following that were Thailand with 501 tourists and Singapore with 330 tourists
   
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4418cba3-885b-4d2b-9fc2-8bfa495977ea" alt="image" width="350">
+</p>
 
+In 2022, because Vietnam started reopening after the pandemic in March, the number of international visitors in the early months of the year was not significant. However, from June onwards, the number of international visitors steadily increased, with a 13% rise in August, continuing to grow until the end of the year, reaching 575 visitors.
 
+The increase in international visitors from August to the end of the year can be attributed to several factors: From mid-2022, Vietnam intensified its tourism promotion in international markets through events, travel fairs (such as ITB Asia in Singapore), and digital media campaigns. This helped raise international tourists' awareness of Vietnam's safety and readiness. Additionally, the period from August to the end of the year is typically the peak tourist season for international visitors due to summer vacations and the holiday season. Vietnam hosted many events to attract tourists, such as the Hue Festival, as well as festivals in Da Nang and Phu Quoc
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/97e78b55-7504-46ce-a3a8-710dff6a4651" alt="image" width="350">
+</p>
+
+2023 has been an extremely dynamic year for Vietnam's tourism in general and Da Nang in particular. International visitors increased by 65%, with more than 10,000 visitors arriving.
  
-     
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/503178cf-5c84-46f2-b405-f6681c9c4a4e" alt="image" width="350">
+</p>
+"In 2023, China announced the reopening of its borders and tourism, which holds significant meaning for Vietnam's tourism industry, as it considers China a major market. The easing of these restrictions is seen as a positive signal, helping to boost efforts to attract Chinese tourists, stabilize the flow of international visitors to Vietnam, and increase revenue from this potential market. 
 
+The number of visitors surged to 2,252 in 2023, accounting for a large proportion of the total visitors in the year."
