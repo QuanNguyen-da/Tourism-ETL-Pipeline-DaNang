@@ -83,8 +83,8 @@ In this project, several online platforms are utilized to gather valuable data f
   See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
   
 # Insight and Visualization
+<img src="https://github.com/user-attachments/assets/35853ecf-24d6-498c-917f-75d602e5c627" alt="image" width="300">
 
-  ![image](https://github.com/user-attachments/assets/35853ecf-24d6-498c-917f-75d602e5c627)
   The number of tourists coming to Da Nang has been steadily increasing over the years, indicating that tourism in Vietnam     is growing rapidly.
 
   In 2021, the tourism industry was almost frozen. The cause of this situation was the ongoing Covid-19 pandemic, where   
