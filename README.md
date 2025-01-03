@@ -138,6 +138,6 @@ The increase in international visitors from August to the end of the year can be
 <p align="center">
   <img src="https://github.com/user-attachments/assets/503178cf-5c84-46f2-b405-f6681c9c4a4e" alt="image" width="350">
 </p>
-"In 2023, China announced the reopening of its borders and tourism, which holds significant meaning for Vietnam's tourism industry, as it considers China a major market. The easing of these restrictions is seen as a positive signal, helping to boost efforts to attract Chinese tourists, stabilize the flow of international visitors to Vietnam, and increase revenue from this potential market. 
+In 2023, China announced the reopening of its borders and tourism, which holds significant meaning for Vietnam's tourism industry, as it considers China a major market. The easing of these restrictions is seen as a positive signal, helping to boost efforts to attract Chinese tourists, stabilize the flow of international visitors to Vietnam, and increase revenue from this potential market. 
 
-The number of visitors surged to 2,252 in 2023, accounting for a large proportion of the total visitors in the year."
+The number of visitors surged to 2,252 in 2023, accounting for a large proportion of the total visitors in the year.
