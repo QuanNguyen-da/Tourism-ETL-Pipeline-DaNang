@@ -1,8 +1,12 @@
 # **Tourism-ETL-Pipeline-DaNang and Analyzing Behaviers Tourisms**
-## Why am I choose this topic?
+## Why choosing this topic?
 
 
-Big data from social media platforms and service websites has provided valuable insights for analysis and high-level decision-making. Nowadays, sharing experiences and information online has become increasingly common, contributing to the creation of massive amounts of data. As a result, big data is drawing significant attention from researchers and decision-makers across various fields, especially in the tourism industry
+Big data from social media platforms and service websites has provided valuable insights for analysis and high-level decision-making. Nowadays, sharing experiences and information online has become increasingly common, contributing to the creation of massive amounts of data. As a result, big data is drawing significant attention from researchers and decision-makers across various fields, especially in the tourism industry. 
+
+Analyzing tourist behavior in Da Nang has become an urgent requirement as the city is increasingly recognized as an attractive destination for both domestic and international visitors. Understanding tourists' behavior, such as their sightseeing preferences, not only helps local businesses optimize their services but also supports authorities in developing effective promotional strategies and improving the quality of the destination.
+
+That why I choos this topic. 
 
 ###
  # Tourism ETL Pipeline and Data Warehouse for Da Nang City
