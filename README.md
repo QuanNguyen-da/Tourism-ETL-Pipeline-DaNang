@@ -29,3 +29,21 @@ In this project, several online platforms are utilized to gather valuable data f
 1. Flickr - A popular photo-sharing website that allows users to upload and share images. It provides valuable geographical and user data.
 2. Booking.com - A leading online travel agency specializing in lodging reservations, providing user reviews and ratings of hotels, which are key for analyzing tourist behavior.
 3. Agoda - Another significant online travel service platform offering hotel booking services and user-generated content, including reviews and ratings, for a comprehensive analysis of accommodation preferences.
+
+## Data Crawling
+  ### 🏨 Hotel Data
+  Each hotel will collect information such as: the access link to the hotel, the hotel’s rating score, the total number of 
+  reviews, the hotel address, the ward, district of the hotel, and ratings for various criteria such as: service, location, 
+  facilities, cleanliness, and price.
+  
+  ## 🖼️ Flickr Photo Information
+  Each photo uploaded by tourists to the Flickr platform includes information such as: the photo, caption, time, and may 
+  also include details about the tourist's country. Specifically, the following information will be collected:
+   **UserID** : Each tourist will have a unique UserID to identify them.
+   **Country**: The country or location where the tourist resides.
+   **Photo**  : The link to the photo uploaded by the tourist on Flickr.
+   **Title**  : The title of the post.
+   **Description**: The content of the post.
+   **DateTaken**: The time when the photo was taken.
+   **Location**: The location where the photo was taken.
+
