@@ -11,9 +11,9 @@ This project builds an ETL pipeline and a data warehouse to analyze tourism data
 - **Power BI** (for visualization)
 
 ## 📁 Project Structure:
-- **/data**: Contains raw and cleaned data
-- **/scripts**: Python scripts for web scraping and geocoding
-- **/dashboards**: Power BI dashboards
+- **/ETL.sln**: ETL Pipeline in SSIS
+- **/scripts**: Python scripts for web scraping and Transferring by using geocoding. Folder for Dirty_data and Clean_Data. 
+- **/Visualization**: Power BI dashboards
 
 ## 📌 Project Steps:
 1. Scraping data from hotel websites and Flickr API
