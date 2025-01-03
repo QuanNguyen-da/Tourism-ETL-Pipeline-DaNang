@@ -24,19 +24,20 @@ That why I choose this topic.
 3. Building an ETL pipeline using SSIS
 4. Storing and Cleaning data in SQL Server
 5. Visualizing data with Power BI
+   
 ## 🌐 Introduction to the Websites
 In this project, several online platforms are utilized to gather valuable data for analysis. Below is an overview of the key websites involved:
 1. Flickr - A popular photo-sharing website that allows users to upload and share images. It provides valuable geographical and user data.
 2. Booking.com - A leading online travel agency specializing in lodging reservations, providing user reviews and ratings of hotels, which are key for analyzing tourist behavior.
 3. Agoda - Another significant online travel service platform offering hotel booking services and user-generated content, including reviews and ratings, for a comprehensive analysis of accommodation preferences.
 
-## Data Crawling
+## Introduce 
   ### 🏨 Hotel Data
   Each hotel will collect information such as: the access link to the hotel, the hotel’s rating score, the total number of 
   reviews, the hotel address, the ward, district of the hotel, and ratings for various criteria such as: service, location, 
   facilities, cleanliness, and price.
   
-  ## 🖼️ Flickr Photo Information
+  ### 🖼️ Flickr Photo Information
   Each photo uploaded by tourists to the Flickr platform includes information such as: the photo, caption, time, and may 
   also include details about the tourist's country. Specifically, the following information will be collected:
    - **UserID** : Each tourist will have a unique UserID to identify them.
@@ -46,4 +47,18 @@ In this project, several online platforms are utilized to gather valuable data f
    - **Description**: The content of the post.
    - **DateTaken**: The time when the photo was taken.
    - **Location**: The location where the photo was taken.
+
+ ## Crawling Data
+   ### 🏨 Hotel
+   Dictionary: Selenium, Webdriver Manager and Beautifulsoup4. 
+   Use BeautifulSoup to parse HTML. Extract the HTML content of the page after it has fully loaded, and use BeautifulSoup to 
+   analyze and retrieve the necessary information about the hotel details.
+   ### 🖼️ Flickr Photo
+   Dictionary: Requests, Flickrapi, API key.
+   To collect data from Flickr through the API, you need to request a Key and Secret by visiting the App Garden and 
+   requesting an API key. Once you have the Key and Secret, you can start collecting data through the API. Use Python and 
+   install the following pip packages: pip install requests, pip install flickrapi.
+
+ 
+     
 
