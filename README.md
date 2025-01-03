@@ -6,28 +6,21 @@ Big data from social media platforms and service websites has provided valuable 
 
 Analyzing tourist behavior in Da Nang has become an urgent requirement as the city is increasingly recognized as an attractive destination for both domestic and international visitors. Understanding tourists' behavior, such as their sightseeing preferences, not only helps local businesses optimize their services but also supports authorities in developing effective promotional strategies and improving the quality of the destination.
 
-That why I choos this topic. 
+That why I choose this topic. 
 
 ###
  # **Overview of the Development Process**
 ![image](https://github.com/user-attachments/assets/815f1614-d3af-47d8-af72-75de0d9e2216)
 
-This project builds an ETL pipeline and a data warehouse to analyze tourism data in Da Nang City using Python, SQL, SSIS, and Power BI.
-
-## 🚀 Tools and Technologies:
-- **Python** (Selenium, Requests, Pandas)
-- **SQL Server** (for data storage)
-- **SSIS** (for ETL pipeline)
-- **Power BI** (for visualization)
-
-## 📁 Project Structure:
-- **/ETL.sln**: ETL Pipeline in SSIS
-- **/scripts**: Python scripts for web scraping and Transferring by using geocoding. Folder for Dirty_data and Clean_Data. 
-- **/Visualization**: Power BI dashboards
+ # 🛠️ **Tools and Technologies**
+- **Python**: Selenium, Requests, Pandas to crawling data from web and API
+- **SQL Server**: for data storage and transform 
+- **SSIS**: for ETL pipeline
+- **Power BI**: for visualization
 
 ## 📌 Project Steps:
-1. Scraping data from hotel websites and Flickr API
-2. Cleaning and transforming data
+1. Scraping data from Hotel websites and Flickr API
+2. Cleaning and transforming data by Using Geocage 
 3. Building an ETL pipeline using SSIS
 4. Storing and Cleaning data in SQL Server
 5. Visualizing data with Power BI
