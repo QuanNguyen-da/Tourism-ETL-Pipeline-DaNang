@@ -39,11 +39,11 @@ In this project, several online platforms are utilized to gather valuable data f
   ## 🖼️ Flickr Photo Information
   Each photo uploaded by tourists to the Flickr platform includes information such as: the photo, caption, time, and may 
   also include details about the tourist's country. Specifically, the following information will be collected:
-   **UserID** : Each tourist will have a unique UserID to identify them.
-   **Country**: The country or location where the tourist resides.
-   **Photo**  : The link to the photo uploaded by the tourist on Flickr.
-   **Title**  : The title of the post.
-   **Description**: The content of the post.
-   **DateTaken**: The time when the photo was taken.
-   **Location**: The location where the photo was taken.
+   - **UserID** : Each tourist will have a unique UserID to identify them.
+   - **Country**: The country or location where the tourist resides.
+   - **Photo**  : The link to the photo uploaded by the tourist on Flickr.
+   - **Title**  : The title of the post.
+   - **Description**: The content of the post.
+   - **DateTaken**: The time when the photo was taken.
+   - **Location**: The location where the photo was taken.
 
