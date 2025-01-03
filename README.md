@@ -59,6 +59,37 @@ In this project, several online platforms are utilized to gather valuable data f
    requesting an API key. Once you have the Key and Secret, you can start collecting data through the API. Use Python and 
    install the following pip packages: pip install requests, pip install flickrapi.
 
+  ## Transforming Data
+  Check and handle null or invalid values using Python, then perform reverse geocoding using OpenCage.
+  Download bakages: opencage, pandas. 
+  Get the API key and start transferring, after that we have somethings like: 
+  ![image](https://github.com/user-attachments/assets/0239b461-21cf-48b6-8e39-96456e7ce630)
+
+  With FLickr data, we tranferring location from Latitude and Longitude. 
+
+  ## Designing ERD
+  The data from the three sources, Flickr, Booking.com, and Agoda, are different. Therefore, to link the data, the team will 
+  design an ERD from the initial three tables as follows:
+  ![image](https://github.com/user-attachments/assets/445aaa1a-efe5-4e29-8850-3ee5249e4f48)
+
+  ## Buid ETL Pipeline in SSIS
+  Using SSMS to store and SSIS to build ETL pipeline. Then we make some transform by SQL.
+  Example: 
+  ![image](https://github.com/user-attachments/assets/13a0a6a6-54e8-4997-ad69-885e57b5e42a)
+
+  See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
+  
+# Insight and Visualization
+  ![image](https://github.com/user-attachments/assets/35853ecf-24d6-498c-917f-75d602e5c627)
+  The number of tourists coming to Da Nang has been steadily increasing over the years, indicating that tourism in Vietnam     is growing rapidly.
+
+  In 2021, the tourism industry was almost frozen. The cause of this situation was the ongoing Covid-19 pandemic, where both   other countries and Vietnam had to close their borders to fight the pandemic, which significantly impacted tourism      
+  nationwide, including in Da Nang.
+
+  
+
+
+
  
      
 
