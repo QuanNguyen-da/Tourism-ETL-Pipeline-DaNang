@@ -9,7 +9,8 @@ Analyzing tourist behavior in Da Nang has become an urgent requirement as the ci
 That why I choos this topic. 
 
 ###
- # Tourism ETL Pipeline and Data Warehouse for Da Nang City
+ # **Overview of the Development Process**
+![image](https://github.com/user-attachments/assets/815f1614-d3af-47d8-af72-75de0d9e2216)
 
 This project builds an ETL pipeline and a data warehouse to analyze tourism data in Da Nang City using Python, SQL, SSIS, and Power BI.
 
