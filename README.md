@@ -76,7 +76,7 @@ In this project, several online platforms are utilized to gather valuable data f
   Finally we have this dataset:
   
   <p align="center">
-   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="350">
+   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="45 0">
   </p>
 
 
@@ -93,9 +93,12 @@ In this project, several online platforms are utilized to gather valuable data f
   </p>
 
    Once you have the Key and Secret, you can start collecting data through the API. 
-   Use Python and install the following pip packages: `pip install requests`, `pip install flickrapi`, `import pandas as pd`
-   Because Location is Da Nang so we sent Latitude and Longitude: `lat_min, lat_max = 15.975, 16.25`,
-   `lon_min, lon_max = 107.975, 108.275`. Then sending number of photo. 
+   
+   Use Python and install the following pip packages:  `pip install requests`, `pip install flickrapi`, `import pandas as pd`
+   
+   Because Location is Da Nang so we sent Latitude and Longitude: `lat_min, lat_max = 15.975, 16.25`, `lon_min, lon_max = 107.975, 108.275`. 
+   Then sending number of photo. 
+   
    We collect these data:  
    ` 'User ID': owner_id,
             'Country': country,
@@ -105,16 +108,66 @@ In this project, several online platforms are utilized to gather valuable data f
             'Longitude': longitude,
             'Photo URL': photo_url,
             'Description': description`
-     
+  ## Cleaning Data
+  Because the data is real-world, there will be many issues. Before performing location conversion, it is necessary to clean the data first, especially Flickr.
+  The important columns are UserID, Country, DateTaken, Latitude, and Longitude, so the null values in these columns will be checked.
 
-  ## Transforming Data
-  Check and handle null or invalid values using Python, then perform reverse geocoding using OpenCage.
-  Download bakages: opencage, pandas. 
-  Get the API key and start transferring, after that we have somethings like: 
+   ` column_to_check=['UserID','Country','DateTaken','Latitude','Longitude']
+     null_values=data[column_to_check].isnull().sum()`
+
+     Result:
+
+   <p align="center">
+        <img src="https://github.com/user-attachments/assets/0cea2d8f-1468-48b1-9fce-a46ef843ffe9" alt="image" width="350">
+     </p>
+   
+   It can be seen that the Country column has many null values, but since the number of observations collected is large, it can be handled by removing them.
+  Check and handle null or invalid values using Python.
+
+  Convert to Uniform Format: 
+  Since the name of a country can be written in different forms, for example, the United States can be written as USA or United States as shown below, the team will perform   the conversion to a single format. This will be done using Excel.
+  
+  <p align="center">
+        <img src="https://github.com/user-attachments/assets/9fa1b696-2d12-435c-9ded-db23c672c197" alt="image" width="350">
+     </p>
+   
+
+  ## Transforming Location Data by OpenCage GeoCoding
+  Firstly you must get the key in web of OpenCage GeoCoding.
+  
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/05757821-fc66-4470-9222-6c6d2ce0acb7" alt="image" width="350">
+  </p>
+  
+  Download bakages: `from opencage.geocoder`, `import OpenCageGeocode`, `import time`.
+  
+  Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
+
+  `def get_address_components(address_1):
+    result = geocoder.geocode(address_1)
+    if result and len(result):
+        components = result[0]['components']
+
+        # Split
+        address_parts = address_1.split(',')
+        street_info = address_parts[0].strip().split(" ", 1)
+        house_number = street_info[0]
+        street_name = "Đường " + street_info[1] if len(street_info) > 1 else 'N/A'
+
+        # Getting Ward and District
+        ward = components.get('quarter', 'N/A').strip()
+        district = components.get('suburb', 'N/A').strip()
+
+        return house_number, street_name, ward, district
+    else:
+        return 'N/A', 'N/A', 'N/A', 'N/A'`
+      
+ Result:
   
   <p align="center">
     <img src="https://github.com/user-attachments/assets/0239b461-21cf-48b6-8e39-96456e7ce630" alt="image" width="350">
   </p>
+  
   With FLickr data, we tranferring location from Latitude and Longitude. 
 
   ## Designing ERD
