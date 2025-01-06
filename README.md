@@ -244,7 +244,7 @@ Create a new output with two columns: UserID1 and Country1. Afterward, check the
 
 Note: The data type must be converted to Unicode String because the data will contain Vietnamese characters. Set the Input Column to "ReadWrite".
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/7bbc5eb7-3324-4fd4-8372-c6590dae0f37" alt="image" width="350">
+    <img src="https://github.com/user-attachments/assets/7bbc5eb7-3324-4fd4-8372-c6590dae0f37" alt="image" width="300">
  </p>
 Note: Before clicking OK, check for any errors by opening the Error List. Make sure to save your work before exiting. Use OLE DB Destination to load the transformed data to the destination. 
 
@@ -261,23 +261,23 @@ However, before that, you must create a table at the destination with a structur
 Click Start to run the Customer Flow you just created.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/d013fafe-9345-4cd9-9a99-94c2dfcb49ed" alt="image" width="350">
+    <img src="https://github.com/user-attachments/assets/d013fafe-9345-4cd9-9a99-94c2dfcb49ed" alt="image" width="300">
  </p>
 
 Similarly, for the other tables, here are the flows for each table:
 **Data Flow Data**
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/af7944b0-17dc-46f2-97e8-0aa9ba4cd295" alt="image" width="350">
+    <img src="https://github.com/user-attachments/assets/af7944b0-17dc-46f2-97e8-0aa9ba4cd295" alt="image" width="300">
  </p>
  
 **Data Flow Location**
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/096d51de-571e-4014-bcf8-9276b1322462" alt="image" width="350">
+    <img src="https://github.com/user-attachments/assets/096d51de-571e-4014-bcf8-9276b1322462" alt="image" width="300">
  </p>
 
 **Data Flow Hotel**
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/a5548d47-f23a-45f4-8122-fb1249dfde30" alt="image" width="350">
+    <img src="https://github.com/user-attachments/assets/a5548d47-f23a-45f4-8122-fb1249dfde30" alt="image" width="300">
  </p>
 
 ## Transform by SQL
@@ -322,7 +322,7 @@ See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
   
 # Insight and Visualization
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/35853ecf-24d6-498c-917f-75d602e5c627" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/35853ecf-24d6-498c-917f-75d602e5c627" alt="image" width="300">
 </p>
 
   The number of tourists coming to Da Nang has been steadily increasing over the years, indicating that tourism in Vietnam    is growing rapidly.
@@ -331,20 +331,20 @@ See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
   nationwide, including in Da Nang.
 
  <p align="center">
-  <img src="https://github.com/user-attachments/assets/b1797fb0-54d0-4426-9967-35bf50306eee" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/b1797fb0-54d0-4426-9967-35bf50306eee" alt="image" width="300">
 </p>
 
 The number of tourists visiting Da Nang fluctuates over time, specifically, the number of tourists increases significantly at the beginning of the year in January and February, and peaks during the summer months of June, July, and August.
 The number of tourists to Da Nang tends to increase during these months due to various factors such as the climate, public holidays, and tourism events and activities taking place during this period.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/133238b9-19b9-4eab-9125-9c15185db477" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/133238b9-19b9-4eab-9125-9c15185db477" alt="image" width="300">
 </p>
 
 After more than 2 years of being almost 'frozen' due to the pandemic, in 2022, Vietnam's tourism made a strong comeback with the milestone of fully reopening. Vietnam became the first country in Southeast Asia to fully open its tourism. After reopening, Vietnam's tourism recovered strongly with the number of visitors reaching 3,000 tourists. However, this figure is still far below the 18,000 international visitors in 2019. The reason for this situation is that the full reopening happened in March, which was not yet the peak tourist season. Additionally, this was the period when the Russia-Ukraine war was unfolding, leading to the closure of related flight routes, and some countries still had not lifted lockdowns due to the pandemic.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c6c3de08-ceee-4c2c-a55a-643501857d5f" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/c6c3de08-ceee-4c2c-a55a-643501857d5f" alt="image" width="300">
 </p>
 
 However, compared to 2021, there was a significant growth in 2022, but the number of visitors from different countries showed considerable disparity, as seen in Chart 4.
@@ -356,7 +356,7 @@ Notably, South Korea led with 853 tourists, having the highest number of visitor
 The tourism market in 2022 experienced growth with an increase in the number of visitors from countries like the United States with 644 tourists, ranking second and accounting for 21.38% of the total international visitors to Da Nang in 2022. Following that were Thailand with 501 tourists and Singapore with 330 tourists
   
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4418cba3-885b-4d2b-9fc2-8bfa495977ea" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/4418cba3-885b-4d2b-9fc2-8bfa495977ea" alt="image" width="300">
 </p>
 
 In 2022, because Vietnam started reopening after the pandemic in March, the number of international visitors in the early months of the year was not significant. However, from June onwards, the number of international visitors steadily increased, with a 13% rise in August, continuing to grow until the end of the year, reaching 575 visitors.
@@ -364,13 +364,13 @@ In 2022, because Vietnam started reopening after the pandemic in March, the numb
 The increase in international visitors from August to the end of the year can be attributed to several factors: From mid-2022, Vietnam intensified its tourism promotion in international markets through events, travel fairs (such as ITB Asia in Singapore), and digital media campaigns. This helped raise international tourists' awareness of Vietnam's safety and readiness. Additionally, the period from August to the end of the year is typically the peak tourist season for international visitors due to summer vacations and the holiday season. Vietnam hosted many events to attract tourists, such as the Hue Festival, as well as festivals in Da Nang and Phu Quoc
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/97e78b55-7504-46ce-a3a8-710dff6a4651" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/97e78b55-7504-46ce-a3a8-710dff6a4651" alt="image" width="300">
 </p>
 
 2023 has been an extremely dynamic year for Vietnam's tourism in general and Da Nang in particular. International visitors increased by 65%, with more than 10,000 visitors arriving.
  
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/503178cf-5c84-46f2-b405-f6681c9c4a4e" alt="image" width="350">
+  <img src="https://github.com/user-attachments/assets/503178cf-5c84-46f2-b405-f6681c9c4a4e" alt="image" width="300">
 </p>
 In 2023, China announced the reopening of its borders and tourism, which holds significant meaning for Vietnam's tourism industry, as it considers China a major market. The easing of these restrictions is seen as a positive signal, helping to boost efforts to attract Chinese tourists, stabilize the flow of international visitors to Vietnam, and increase revenue from this potential market. 
 
