@@ -57,15 +57,25 @@ In this project, several online platforms are utilized to gather valuable data f
    #### Detailed
    Download the following necessary libraries: 
    
-         from selenium import webdriver
-         from selenium.webdriver.chrome.service import Service
-         from webdriver_manager.chrome import ChromeDriverManager
-         from selenium.webdriver.common.by import By
-         import time
-         import csv
-         from bs4 import BeautifulSoup  
+         `from selenium import webdriver`,
+        ` from selenium.webdriver.chrome.service import Service`,
+        ` from webdriver_manager.chrome import ChromeDriverManager`,
+        ` from selenium.webdriver.common.by import By`,
+        ` import time`,
+         `import csv`,
+         `from bs4 import BeautifulSoup  `,
          
-  Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, 
+  Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, .... See more in file: main/scripts/Crawl_Data/Crawl_flickr.py
+  We collect these data: 
+     `hotel_url,
+            score,
+            reviews_num,
+            reviews,
+            categories['Service'],
+            categories['Location'],
+            categories['Facilities'],
+            categories['Cleanliness'],
+            categories['Value for money']`
 
 ### 🖼️ Flickr Photo
    Dictionary: Requests, Flickrapi, API key.
