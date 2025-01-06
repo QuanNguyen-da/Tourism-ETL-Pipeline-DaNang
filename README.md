@@ -56,18 +56,16 @@ In this project, several online platforms are utilized to gather valuable data f
 
    #### Detailed
    Download the following necessary libraries: 
-   ``` from selenium import webdriver
- from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-import time
-import csv
-from bs4 import BeautifulSoup ```
+     ``` from selenium import webdriver
+    from selenium.webdriver.chrome.service import Service
+   from webdriver_manager.chrome import ChromeDriverManager
+   from selenium.webdriver.common.by import By
+   import time
+   import csv
+   from bs4 import BeautifulSoup  ```
 
 
-
-   
-   ### 🖼️ Flickr Photo
+### 🖼️ Flickr Photo
    Dictionary: Requests, Flickrapi, API key.
    To collect data from Flickr through the API, you need to request a Key and Secret by visiting the App Garden and 
    requesting an API key. Once you have the Key and Secret, you can start collecting data through the API. Use Python and 
