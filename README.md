@@ -64,7 +64,8 @@ In this project, several online platforms are utilized to gather valuable data f
          import time
          import csv
          from bs4 import BeautifulSoup  
-
+         
+  Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, 
 
 ### 🖼️ Flickr Photo
    Dictionary: Requests, Flickrapi, API key.
