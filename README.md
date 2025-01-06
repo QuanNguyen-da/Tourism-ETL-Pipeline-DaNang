@@ -70,12 +70,13 @@ In this project, several online platforms are utilized to gather valuable data f
   
   See more in file: main/scripts/Crawl_Data/Crawl_flickr.py
   
-  We collect these data: `hotel_url`, `score`,`reviews_num`,`reviews`,`categories['Service']`,`categories['Location']`,`categories['Facilities']`,
-  ` categories['Cleanliness']`,`categories['Value for money']`
+  We collect these data:  `hotel_url`,`score`,`reviews_num`,`reviews`,`categories['Service']`,`categories['Location']`,`categories['Facilities']`,
+  ` categories['Cleanliness']`,`categories['Value for money']`.
 
   Finally we have this dataset:
+  
   <p align="center">
-   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="300">
+   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="350">
   </p>
 
 
@@ -87,15 +88,24 @@ In this project, several online platforms are utilized to gather valuable data f
 
    To collect data from Flickr through the API, you need to request a Key and Secret by visiting the App Garden and 
    requesting an API key like this.
-
-     <p align="center">
-       <img src="https://github.com/user-attachments/assets/2645e11a-c37e-474a-8e62-10896786cf0e" alt="image" width="300">
-     </p>
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/2645e11a-c37e-474a-8e62-10896786cf0e" alt="image" width="350">
+  </p>
 
    Once you have the Key and Secret, you can start collecting data through the API. 
    Use Python and install the following pip packages: `pip install requests`, `pip install flickrapi`, `import pandas as pd`
    Because Location is Da Nang so we sent Latitude and Longitude: `lat_min, lat_max = 15.975, 16.25`,
-   `lon_min, lon_max = 107.975, 108.275`
+   `lon_min, lon_max = 107.975, 108.275`. Then sending number of photo. 
+   We collect these data:  
+   ` 'User ID': owner_id,
+            'Country': country,
+            'Photo Title': title,
+            'Date Taken': date_taken,
+            'Latitude': latitude,
+            'Longitude': longitude,
+            'Photo URL': photo_url,
+            'Description': description`
+     
 
   ## Transforming Data
   Check and handle null or invalid values using Python, then perform reverse geocoding using OpenCage.
