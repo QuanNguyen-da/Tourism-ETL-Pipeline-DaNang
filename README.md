@@ -58,13 +58,13 @@ In this project, several online platforms are utilized to gather valuable data f
    #### Detailed
    Import the following necessary libraries: 
 ```bash
- from selenium import webdriver
-         from selenium.webdriver.chrome.service import Service
-         from webdriver_manager.chrome import ChromeDriverManager
-         from selenium.webdriver.common.by import By
-         import time
-         import csv
-         from bs4 import BeautifulSoup 
+   from selenium import webdriver
+   from selenium.webdriver.chrome.service import Service
+   from webdriver_manager.chrome import ChromeDriverManager
+   from selenium.webdriver.common.by import By
+   import time
+   import csv
+   from bs4 import BeautifulSoup 
 ``` 
         
   Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, .... 
@@ -167,7 +167,6 @@ def get_address_components(address_1):
     else:
         return 'N/A', 'N/A', 'N/A', 'N/A'
 ```
-      
  Result:
   
   <p align="center">
@@ -187,8 +186,33 @@ def get_address_components(address_1):
 ```python
 import pandas as pd
 ```
+**Notes on data types during conversion:**  To convert from Latitude and Longitude to the corresponding location, these two columns must be in Float format. After converting to Float, recheck the data types
 
-  ## Designing ERD
+Perform the conversion with the output being the Street Name, District Name, Commune Name, and City Name.
+``` bash
+ def get_address_components(lat, lon):
+    result = geocoder.geocode(f"{lat}, {lon}")
+    if result and len(result):
+        components = result[0]['components']
+        street = components.get('road', 'N/A')
+        ward = components.get('quarter', 'N/A')
+        district = components.get('suburb', 'N/A')
+        city = components.get('city', 'N/A')
+        country = components.get('country', 'N/A')
+        return street, ward, district, city, country
+    else:
+        return 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'
+```
+
+Result:
+  
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/21613a2a-cb17-4002-911d-5eaacc01b21f" alt="image" width="350">
+  </p>
+
+
+
+## Designing ERD
   The data from the three sources, Flickr, Booking.com, and Agoda, are different. Therefore, to link the data, the team 
   will design an ERD from the initial three tables as follows:
   
@@ -196,7 +220,7 @@ import pandas as pd
     <img src="https://github.com/user-attachments/assets/445aaa1a-efe5-4e29-8850-3ee5249e4f48" alt="image" width="350">
   </p>
 
-  ## Buid ETL Pipeline in SSIS
+## Buid ETL Pipeline in SSIS
   Using SSMS to store and SSIS to build ETL pipeline. Then we make some transform by SQL.
   Example: 
   
