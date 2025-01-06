@@ -57,14 +57,15 @@ In this project, several online platforms are utilized to gather valuable data f
 
    #### Detailed
    Import the following necessary libraries: 
-   
-         from selenium import webdriver
+```bash
+ from selenium import webdriver
          from selenium.webdriver.chrome.service import Service
          from webdriver_manager.chrome import ChromeDriverManager
          from selenium.webdriver.common.by import By
          import time
          import csv
-         from bs4 import BeautifulSoup  
+         from bs4 import BeautifulSoup 
+``` 
         
   Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, .... 
   
@@ -109,13 +110,15 @@ In this project, several online platforms are utilized to gather valuable data f
             'Longitude': longitude,
             'Photo URL': photo_url,
             'Description': description`
+            
   ## Cleaning Data
   Because the data is real-world, there will be many issues. Before performing location conversion, it is necessary to clean the data first, especially Flickr.
   The important columns are UserID, Country, DateTaken, Latitude, and Longitude, so the null values in these columns will be checked.
-
+  
+``` bash
      column_to_check=['UserID','Country','DateTaken','Latitude','Longitude']
      null_values=data[column_to_check].isnull().sum()
-
+```
    <p align="center">
         <img src="https://github.com/user-attachments/assets/0cea2d8f-1468-48b1-9fce-a46ef843ffe9" alt="image" width="350">
      </p>
