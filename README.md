@@ -57,12 +57,12 @@ In this project, several online platforms are utilized to gather valuable data f
    #### Detailed
    Download the following necessary libraries: 
    ``` from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
 import csv
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup ```
 
 
 
