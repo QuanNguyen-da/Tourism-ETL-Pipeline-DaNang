@@ -145,6 +145,7 @@ In this project, several online platforms are utilized to gather valuable data f
   
   Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
 
+     ``` bash
       def get_address_components(address_1):
       result = geocoder.geocode(address_1)
       if result and len(result):
@@ -162,7 +163,8 @@ In this project, several online platforms are utilized to gather valuable data f
 
         return house_number, street_name, ward, district
     else:
-        return 'N/A', 'N/A', 'N/A', 'N/A'`
+        return 'N/A', 'N/A', 'N/A', 'N/A'
+    ```
       
  Result:
   
