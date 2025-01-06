@@ -76,7 +76,7 @@ In this project, several online platforms are utilized to gather valuable data f
   Finally we have this dataset:
   
   <p align="center">
-   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="45 0">
+   <img src="https://github.com/user-attachments/assets/8a01b373-4886-47cb-bbda-9bd10be71cc3" alt="image" width="450">
   </p>
 
 
@@ -88,7 +88,8 @@ In this project, several online platforms are utilized to gather valuable data f
 
    To collect data from Flickr through the API, you need to request a Key and Secret by visiting the App Garden and 
    requesting an API key like this.
-<p align="center">
+   
+  <p align="center">
    <img src="https://github.com/user-attachments/assets/2645e11a-c37e-474a-8e62-10896786cf0e" alt="image" width="350">
   </p>
 
@@ -112,10 +113,8 @@ In this project, several online platforms are utilized to gather valuable data f
   Because the data is real-world, there will be many issues. Before performing location conversion, it is necessary to clean the data first, especially Flickr.
   The important columns are UserID, Country, DateTaken, Latitude, and Longitude, so the null values in these columns will be checked.
 
-   ` column_to_check=['UserID','Country','DateTaken','Latitude','Longitude']
-     null_values=data[column_to_check].isnull().sum()`
-
-     Result:
+     column_to_check=['UserID','Country','DateTaken','Latitude','Longitude']
+     null_values=data[column_to_check].isnull().sum()
 
    <p align="center">
         <img src="https://github.com/user-attachments/assets/0cea2d8f-1468-48b1-9fce-a46ef843ffe9" alt="image" width="350">
@@ -133,6 +132,9 @@ In this project, several online platforms are utilized to gather valuable data f
    
 
   ## Transforming Location Data by OpenCage GeoCoding
+
+  ### Agoda and Booking
+  
   Firstly you must get the key in web of OpenCage GeoCoding.
   
   <p align="center">
@@ -143,10 +145,10 @@ In this project, several online platforms are utilized to gather valuable data f
   
   Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
 
-  `def get_address_components(address_1):
-    result = geocoder.geocode(address_1)
-    if result and len(result):
-        components = result[0]['components']
+      def get_address_components(address_1):
+      result = geocoder.geocode(address_1)
+      if result and len(result):
+          components = result[0]['components']
 
         # Split
         address_parts = address_1.split(',')
@@ -168,7 +170,19 @@ In this project, several online platforms are utilized to gather valuable data f
     <img src="https://github.com/user-attachments/assets/0239b461-21cf-48b6-8e39-96456e7ce630" alt="image" width="350">
   </p>
   
-  With FLickr data, we tranferring location from Latitude and Longitude. 
+  ### With FLickr data, we tranferring location from Latitude and Longitude. 
+
+  **- Use Python and install the following pip:**
+
+```bash
+!pip install opencage
+```
+
+**Import the pandas library:**
+
+```python
+import pandas as pd
+```
 
   ## Designing ERD
   The data from the three sources, Flickr, Booking.com, and Agoda, are different. Therefore, to link the data, the team 
