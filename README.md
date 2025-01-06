@@ -220,14 +220,105 @@ Result:
     <img src="https://github.com/user-attachments/assets/445aaa1a-efe5-4e29-8850-3ee5249e4f48" alt="image" width="350">
   </p>
 
-## Buid ETL Pipeline in SSIS
-  Using SSMS to store and SSIS to build ETL pipeline. Then we make some transform by SQL.
-  Example: 
-  
-  <p align="center">
-    <img src="https://github.com/user-attachments/assets/13a0a6a6-54e8-4997-ad69-885e57b5e42a" alt="image" width="350">
-  </p>
-  See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
+## Buid ETL Pipeline 
+### Storage Data in SSMS 
+
+After creating the database named "Cap2," the team proceeds to import the data tables. Then, select the source as Excel and the destination, and follow the steps sequentially for all the tables. 
+
+Click Next → Finish to successfully load the data.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/952232b9-c641-476a-b1f0-e8fb3737c344" alt="image" width="350">
+ </p>
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/b5c939ed-0d4c-48b9-a366-49fd19dfcbc7" alt="image" width="350">
+ </p>
+
+
+  ### Build ETL pipeline in SSIS.
+**Data Flow Customer**
+
+Use the Script Component to perform the transformation. In the original table – Flickr, data is collected for each photo, and one person can take multiple photos. Therefore, there will be many duplicate UserIDs. In the Customer table, UserID is used as the Primary Key, so it will be filtered to keep only unique UserIDs along with the corresponding Country.
+
+Create a new output with two columns: UserID1 and Country1. Afterward, check the Input and Output in the "Inputs and Outputs" tab.
+
+Note: The data type must be converted to Unicode String because the data will contain Vietnamese characters. Set the Input Column to "ReadWrite".
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/7bbc5eb7-3324-4fd4-8372-c6590dae0f37" alt="image" width="350">
+ </p>
+Note: Before clicking OK, check for any errors by opening the Error List. Make sure to save your work before exiting. Use OLE DB Destination to load the transformed data to the destination. 
+
+However, before that, you must create a table at the destination with a structure similar to the Output created in the Script.
+
+```bash
+ CREATE TABLE Customer (
+    UserID NVARCHAR(500) not null,
+    Country NVARCHAR(500),
+    UserID1 NVARCHAR(500),
+    Country1 NVARCHAR(500)
+);
+```
+Click Start to run the Customer Flow you just created.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d013fafe-9345-4cd9-9a99-94c2dfcb49ed" alt="image" width="350">
+ </p>
+
+Similarly, for the other tables, here are the flows for each table:
+**Data Flow Data**
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/af7944b0-17dc-46f2-97e8-0aa9ba4cd295" alt="image" width="350">
+ </p>
+ 
+**Data Flow Location**
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/096d51de-571e-4014-bcf8-9276b1322462" alt="image" width="350">
+ </p>
+
+**Data Flow Hotel**
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/a5548d47-f23a-45f4-8122-fb1249dfde30" alt="image" width="350">
+ </p>
+
+## Transform by SQL
+**Encode the User_ID column.**
+```bash
+  WITH CTE AS (
+     SELECT *,
+            ROW_NUMBER() OVER (PARTITION BY UserID ORDER BY (SELECT NULL)) AS RowNum
+     FROM dbo.Customer
+ )
+ DELETE FROM CTE WHERE RowNum > 1;
+ WITH NumberedUsers AS (
+     SELECT 
+         UserID,
+         ROW_NUMBER() OVER (ORDER BY UserID) AS RowNum
+     FROM 
+         Customer
+ )
+ UPDATE Customer
+ SET EncodedUserID = 'KDL_' + CAST(RowNum AS NVARCHAR(10))
+ FROM NumberedUsers
+ WHERE Customer.UserID = NumberedUsers.UserID;
+```
+**Check Duplicate Data**
+
+```bash
+ SELECT LocationID, COUNT(*)
+ FROM dbo.Location
+ GROUP BY LocationID
+ HAVING COUNT(*) > 1;
+ ;WITH CTE AS (
+     SELECT *,
+            ROW_NUMBER() OVER (PARTITION BY LocationID ORDER BY (SELECT NULL)) AS RowNum
+     FROM dbo.Location
+ )
+ DELETE FROM CTE WHERE RowNum > 1;
+ ALTER TABLE dbo.Location
+
+ ADD CONSTRAINT PK_Location PRIMARY KEY (LocationID);
+```
+See more in file name: ETL Pipeline.sln and Cleaning_Data.sql
   
 # Insight and Visualization
 <p align="center">
