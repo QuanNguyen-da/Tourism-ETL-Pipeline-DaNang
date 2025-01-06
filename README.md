@@ -175,13 +175,13 @@ def get_address_components(address_1):
   
   ### With FLickr data, we tranferring location from Latitude and Longitude. 
 
-  **- Use Python and install the following pip:**
+  **Use Python and install the following pip:**
 
 ```bash
 !pip install opencage
 ```
 
-**Import the pandas library:**
+ **Import the pandas library:**
 
 ```python
 import pandas as pd
