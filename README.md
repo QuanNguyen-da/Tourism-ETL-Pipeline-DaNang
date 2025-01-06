@@ -144,55 +144,26 @@ In this project, several online platforms are utilized to gather valuable data f
   Download bakages: `from opencage.geocoder`, `import OpenCageGeocode`, `import time`.
   
   Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
-Your Python code is aimed at using a geocoder to get address components and split the address into useful information like house number, street name, ward, and district. I'll break it down and ensure the function works as expected:
-
-Here is your function with some adjustments and improvements:
-python
-Sao chép mã
-import geocoder
-
+```bash
 def get_address_components(address_1):
-    # Geocode the address to get components
     result = geocoder.geocode(address_1)
-    
-    # Check if the geocode result is valid
     if result and len(result):
         components = result[0]['components']
 
-        # Split the address into parts (Street, House number)
+        # Split
         address_parts = address_1.split(',')
         street_info = address_parts[0].strip().split(" ", 1)
-        
         house_number = street_info[0]
         street_name = "Đường " + street_info[1] if len(street_info) > 1 else 'N/A'
 
-        # Extract Ward and District from components
+        # Getting Ward and District
         ward = components.get('quarter', 'N/A').strip()
         district = components.get('suburb', 'N/A').strip()
 
         return house_number, street_name, ward, district
     else:
-        # Return 'N/A' if geocoding fails
         return 'N/A', 'N/A', 'N/A', 'N/A'
-Explanation of the Code:
-Using Geocoder (geocoder.geocode):
-
-geocoder.geocode(address_1) attempts to get geocode results for the given address.
-If the result exists (if result and len(result)), it retrieves the components of the address (e.g., street, city, district, etc.).
-Splitting the Address:
-
-The address is split at the commas (,), and the first part (usually the street) is further split by the first space to separate the house number from the street name.
-Getting Ward and District:
-
-The components.get() method retrieves the ward and district. If not found, it returns 'N/A'.
-Fallback (if geocode fails):
-
-If the geocoding fails or no result is returned, the function returns 'N/A' for all parts.
-Notes:
-API Key: Ensure that you have the correct API key and that your geocoder package supports the service you are using (like OpenCage, Google, etc.).
-Street Parsing: This assumes that the first part of the address is always the street with a house number, so make sure your addresses follow this structure.
-Let me know if you need further assistance with this!
-
+```
       
  Result:
   
