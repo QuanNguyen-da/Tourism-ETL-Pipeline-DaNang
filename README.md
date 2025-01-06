@@ -66,26 +66,12 @@ In this project, several online platforms are utilized to gather valuable data f
          from bs4 import BeautifulSoup  
         
   Utilizing some functions like: `driver.find_element `, `driver.switch_to.window`, `soup.find_all`, .... 
+  
   See more in file: main/scripts/Crawl_Data/Crawl_flickr.py
   
-  We collect these data: 
-     `      hotel_url,
-     
-            score,
-            
-            reviews_num,
-            
-            reviews,
-            
-            categories['Service'],
-            
-            categories['Location'],
-            
-            categories['Facilities'],
-            
-            categories['Cleanliness'],
-            
-            categories['Value for money']`
+  We collect these data: `hotel_url`, `score`,`reviews_num`,`reviews`,`categories['Service']`,`categories['Location']`,`categories['Facilities']`,
+  ` categories['Cleanliness']`,`categories['Value for money']`
+
 
 ### 🖼️ Flickr Photo
    Dictionary: Requests, Flickrapi, API key.
