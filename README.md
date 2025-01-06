@@ -144,27 +144,32 @@ In this project, several online platforms are utilized to gather valuable data f
   Download bakages: `from opencage.geocoder`, `import OpenCageGeocode`, `import time`.
   
   Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
+ import geocoder
 
-     ``` bash
-      def get_address_components(address_1):
-      result = geocoder.geocode(address_1)
-      if result and len(result):
-          components = result[0]['components']
+def get_address_components(address_1):
+    # Geocode the address to get components
+    result = geocoder.geocode(address_1)
+    
+    # Check if the geocode result is valid
+    if result and len(result):
+        components = result[0]['components']
 
-        # Split
+        # Split the address into parts (Street, House number)
         address_parts = address_1.split(',')
         street_info = address_parts[0].strip().split(" ", 1)
+        
         house_number = street_info[0]
         street_name = "Đường " + street_info[1] if len(street_info) > 1 else 'N/A'
 
-        # Getting Ward and District
+        # Extract Ward and District from components
         ward = components.get('quarter', 'N/A').strip()
         district = components.get('suburb', 'N/A').strip()
 
         return house_number, street_name, ward, district
     else:
+        # Return 'N/A' if geocoding fails
         return 'N/A', 'N/A', 'N/A', 'N/A'
-    ```
+
       
  Result:
   
