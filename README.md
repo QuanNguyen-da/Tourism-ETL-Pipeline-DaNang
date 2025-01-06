@@ -53,6 +53,20 @@ In this project, several online platforms are utilized to gather valuable data f
    Dictionary: Selenium, Webdriver Manager and Beautifulsoup4. 
    Use BeautifulSoup to parse HTML. Extract the HTML content of the page after it has fully loaded, and use BeautifulSoup 
    to analyze and retrieve the necessary information about the hotel details.
+
+   #### Detailed
+   Download the following necessary libraries: 
+   ``` from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+import time
+import csv
+from bs4 import BeautifulSoup
+
+
+
+   
    ### 🖼️ Flickr Photo
    Dictionary: Requests, Flickrapi, API key.
    To collect data from Flickr through the API, you need to request a Key and Secret by visiting the App Garden and 
