@@ -57,7 +57,7 @@ In this project, several online platforms are utilized to gather valuable data f
 
    #### Detailed
    Import the following necessary libraries: 
-```bash
+```python
    from selenium import webdriver
    from selenium.webdriver.chrome.service import Service
    from webdriver_manager.chrome import ChromeDriverManager
@@ -115,7 +115,7 @@ In this project, several online platforms are utilized to gather valuable data f
   Because the data is real-world, there will be many issues. Before performing location conversion, it is necessary to clean the data first, especially Flickr.
   The important columns are UserID, Country, DateTaken, Latitude, and Longitude, so the null values in these columns will be checked.
   
-``` bash
+``` python
      column_to_check=['UserID','Country','DateTaken','Latitude','Longitude']
      null_values=data[column_to_check].isnull().sum()
 ```
@@ -147,7 +147,7 @@ In this project, several online platforms are utilized to gather valuable data f
   Download bakages: `from opencage.geocoder`, `import OpenCageGeocode`, `import time`.
   
   Get the API key and start transferring by using `get_address_components` and `geocoder.geocode`.
-```bash
+```python
 def get_address_components(address_1):
     result = geocoder.geocode(address_1)
     if result and len(result):
@@ -177,7 +177,7 @@ def get_address_components(address_1):
 
   **Use Python and install the following pip:**
 
-```bash
+```python
 !pip install opencage
 ```
 
@@ -189,7 +189,7 @@ import pandas as pd
 **Notes on data types during conversion:**  To convert from Latitude and Longitude to the corresponding location, these two columns must be in Float format. After converting to Float, recheck the data types
 
 Perform the conversion with the output being the Street Name, District Name, Commune Name, and City Name.
-``` bash
+``` python
  def get_address_components(lat, lon):
     result = geocoder.geocode(f"{lat}, {lon}")
     if result and len(result):
@@ -250,7 +250,7 @@ Note: Before clicking OK, check for any errors by opening the Error List. Make s
 
 However, before that, you must create a table at the destination with a structure similar to the Output created in the Script.
 
-```bash
+```sql
  CREATE TABLE Customer (
     UserID NVARCHAR(500) not null,
     Country NVARCHAR(500),
@@ -282,7 +282,7 @@ Similarly, for the other tables, here are the flows for each table:
 
 ## Transform by SQL
 **Encode the User_ID column.**
-```bash
+```sql
   WITH CTE AS (
      SELECT *,
             ROW_NUMBER() OVER (PARTITION BY UserID ORDER BY (SELECT NULL)) AS RowNum
@@ -303,7 +303,7 @@ Similarly, for the other tables, here are the flows for each table:
 ```
 **Check Duplicate Data**
 
-```bash
+```sql
  SELECT LocationID, COUNT(*)
  FROM dbo.Location
  GROUP BY LocationID
